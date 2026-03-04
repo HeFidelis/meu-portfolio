@@ -50,3 +50,8 @@
 .nav-links a:hover::after {
   width: 100%;
 }
+
+.navbar.scrolled {
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+}
