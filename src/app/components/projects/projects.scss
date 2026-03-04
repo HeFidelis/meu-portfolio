@@ -11,6 +11,22 @@
   transition: 0.3s;
   position: relative;
   overflow: hidden;
+
+  .card::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(34,211,238,0.15) 0%, transparent 70%);
+  top: -50%;
+  left: -50%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
 }
 
 .card img {
