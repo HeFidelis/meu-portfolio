@@ -1,5 +1,40 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: var(--bg-light);
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+}
+
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px #00eaff;
-  transition: .3s;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
