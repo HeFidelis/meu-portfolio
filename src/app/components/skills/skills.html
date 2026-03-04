@@ -1,1 +1,13 @@
-<p>skills works!</p>
+<section id="skills">
+  <h2>Skills</h2>
+
+  @for (s of skills; track s.name) {
+    <div class="skill">
+      <span>{{ s.name }}</span>
+
+      <div class="bar">
+        <div class="progress" [style.width.%]="s.level"></div>
+      </div>
+    </div>
+  }
+</section>

@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './skills.scss',
 })
 export class Skills {
-
+  skills = [
+    { name: 'C#/.NET', level: 90 },
+    { name: 'Angular', level: 90 },
+    { name: 'HTML/CSS', level: 95 },
+  ];
 }
