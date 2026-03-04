@@ -8,5 +8,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('meu-portfolio');
+  scroll(id: string) {
+    document.getElementById(id)?.scrollIntoView({behavior: 'smooth'});
+  }
 }
