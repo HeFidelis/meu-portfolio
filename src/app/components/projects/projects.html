@@ -1,1 +1,14 @@
-<p>projects works!</p>
+<section id="projects">
+  <h2>Projetos</h2>
+
+  <div class="cards">
+    @for (p of projects; track p.title) {
+      <div class="card">
+        <img [src]="p.image" [alt]="p.title" />
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+        <a [href]="p.link" target="_blank"> Ver Projeto </a>
+      </div>
+    }
+  </div>
+</section>
