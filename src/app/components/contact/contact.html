@@ -1,1 +1,9 @@
-<p>contact works!</p>
+<section id="contact">
+  <h2>Contato</h2>
+  <form (submit)="sendEmail()">
+    <input type="text" placeholder="Seu nome" required />
+    <input type="email" placeholder="Seu email" required />
+    <textarea placeholder="Escreva uma mensagem"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
