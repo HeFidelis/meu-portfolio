@@ -1,0 +1,9 @@
+.navbar {
+  position: fixed; top: 0; width: 100%;
+  display: flex; justify-content: space-between;
+  padding: 1rem 2rem; background: #1a1a1a;
+  z-index: 1000;
+  a { color: #fff; text-decoration: none; margin: 0 1rem;
+     &:hover { color: #00eaff; transition: .3s; }
+  }
+}
