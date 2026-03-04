@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RevealDirective } from "../../shared/reveal.directive";
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  imports: [RevealDirective],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
