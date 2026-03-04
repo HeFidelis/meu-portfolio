@@ -1,1 +1,12 @@
-<p>banner works!</p>
+<section id="home" class="banner">
+  <h1>Olá, eu sou <span class="name">Seu Nome</span></h1>
+  <ngx-typed-js
+    [strings]="['Desenvolvedor Angular', 'Full-Stack Developer', 'Tech Enthusiast']"
+    typeSpeed="50"
+    backSpeed="30"
+    loop="true"
+  >
+    <span class="typing"></span>
+  </ngx-typed-js>
+  <button (click)="scroll('projects')">VER PROJETOS</button>
+</section>
