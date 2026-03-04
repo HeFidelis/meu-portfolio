@@ -8,12 +8,31 @@ import { RevealDirective } from "../../shared/reveal.directive";
   styleUrl: './projects.scss',
 })
 export class Projects {
+
+  selectedProject: any = null;
+
   projects = [
-  {
-    title: 'Projeto 1',
-    description: 'Descrição curta do projeto',
-    image: 'assets/img/project1.png',
-    link: 'https://github.com/seuusername/projeto1'
-  },
+    {
+      title: 'PediVet',
+      description: 'Sistema de agendamento veterinário',
+      image: 'assets/project1.jpg',
+      github: '#',
+      demo: '#'
+    },
+    {
+      title: 'Clean Architecture API',
+      description: 'API .NET com DDD e JWT',
+      image: 'assets/project2.jpg',
+      github: '#',
+      demo: '#'
+    }
   ];
+
+  open(project: any) {
+    this.selectedProject = project;
+  }
+
+  close() {
+    this.selectedProject = null;
+  }
 }
