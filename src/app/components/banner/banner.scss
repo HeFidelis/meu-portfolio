@@ -1,0 +1,38 @@
+.banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.banner h1 {
+  font-size: 3.5rem;
+}
+
+.name {
+  color: var(--primary);
+}
+
+.typing {
+  font-size: 1.5rem;
+  color: var(--muted);
+}
+
+.banner button {
+  width: fit-content;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary);
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.4);
+}
