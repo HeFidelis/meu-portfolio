@@ -12,6 +12,10 @@
   transition: 0.3s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .logo {
   font-weight: 700;
   font-size: 1.2rem;
@@ -54,4 +58,27 @@
 .navbar.scrolled {
   background: rgba(15, 23, 42, 0.95);
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #0f0f0f;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
 }

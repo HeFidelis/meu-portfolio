@@ -1,13 +1,20 @@
-<section id="skills" appReveal>
-  <h2>Skills</h2>
+<section id="skills" class="skills-section" appReveal>
+  <div class="skills-header">
+    <h2>
+      <span class="kicker">03.</span>
+      Stack Tecnológica
+    </h2>
+    <div class="header-line"></div>
+  </div>
 
-  @for (s of skills; track s.name) {
-    <div class="skill">
-      <span>{{ s.name }}</span>
-
-      <div class="bar">
-        <div class="progress" [style.width.%]="s.level"></div>
+  <div class="tech-grid">
+    @for (tech of technologies; track tech.name) {
+      <div class="tech-card">
+        <div class="tech-icon">
+          <i [class]="tech.iconClass"></i>
+        </div>
+        <span class="tech-name">{{ tech.name }}</span>
       </div>
-    </div>
-  }
+    }
+  </div>
 </section>

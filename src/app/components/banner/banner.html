@@ -1,12 +1,38 @@
 <section id="home" class="banner" appReveal [style.backgroundPositionY.px]="offset">
-  <h1>Olá, eu sou <span class="name">Heitor Fidelis</span></h1>
-  <ngx-typed-js
-    [strings]="['Desenvolvedor Angular', 'Full-Stack Developer', 'Tech Enthusiast']"
-    [typeSpeed]="50"
-    [backSpeed]="30"
-    [loop]="true"
-  >
-    <span class="typing"></span>
-  </ngx-typed-js>
-  <button (click)="scroll('projects')">VER PROJETOS</button>
+  <div class="banner-container">
+    <div class="banner-content">
+      <div class="greeting-animation">Olá, eu sou</div>
+      <h1>Heitor Fidelis</h1>
+      <div class="typing-container">
+        <ngx-typed-js
+          [strings]="['Desenvolvedor Angular', 'Full-Stack Developer', 'Tech Enthusiast']"
+          [typeSpeed]="50"
+          [backSpeed]="30"
+          [loop]="true"
+        >
+          <span class="typing"></span>
+        </ngx-typed-js>
+      </div>
+      <p class="description">
+        Criando experiências digitais incríveis com código limpo e design inovador
+      </p>
+      <div class="action-buttons">
+        <button class="btn-primary" (click)="scroll('projects')">VER PROJETOS</button>
+        <button class="btn-secondary" (click)="scroll('contact')">ENTRAR EM CONTATO</button>
+      </div>
+      <div class="social-links">
+        @for (link of socialLinks; track link.iconClass) {
+          <a [href]="link.url" [title]="link.label" class="social-icon">
+            <i [class]="link.iconClass"></i>
+          </a>
+        }
+      </div>
+    </div>
+    <div class="banner-image">
+      <div class="image-wrapper">
+        <img src="/PerfilHeitorGithub.jpeg" alt="Heitor Fidelis" class="profile-image" />
+        <div class="glow-effect"></div>
+      </div>
+    </div>
+  </div>
 </section>

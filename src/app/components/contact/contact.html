@@ -1,9 +1,16 @@
-<section id="contact" appReveal>
-  <h2>Contato</h2>
+<section id="contact" class="contact-section" appReveal>
+  <div class="contact-header">
+    <h2>
+      <span class="kicker">04.</span>
+      Contato
+    </h2>
+    <div class="header-line"></div>
+  </div>
+
   <form (submit)="sendEmail()">
     <input type="text" placeholder="Seu nome" required />
     <input type="email" placeholder="Seu email" required />
-    <textarea placeholder="Escreva uma mensagem"></textarea>
+    <textarea placeholder="Escreva uma mensagem" rows="6"></textarea>
     <button type="submit">Enviar</button>
   </form>
 </section>

@@ -1,10 +1,16 @@
-<section id="projects" appReveal>
-  <h2>Projetos</h2>
+<section id="projects" class="projects-section" appReveal>
+  <div class="projects-header">
+    <h2>
+      <span class="kicker">02.</span>
+      Projetos
+    </h2>
+    <div class="header-line"></div>
+  </div>
 
   <div class="cards">
     @for (p of projects; track p.title) {
       <div class="card" (click)="open(p)">
-        <img [src]="p.image" />
+        <img [src]="p.image" [alt]="p.title" />
         <h3>{{ p.title }}</h3>
         <p>{{ p.description }}</p>
       </div>

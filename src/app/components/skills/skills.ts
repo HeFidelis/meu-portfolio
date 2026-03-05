@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RevealDirective } from "../../shared/reveal.directive";
+import { RevealDirective } from '../../shared/reveal.directive';
 
 @Component({
   selector: 'app-skills',
@@ -8,9 +8,13 @@ import { RevealDirective } from "../../shared/reveal.directive";
   styleUrl: './skills.scss',
 })
 export class Skills {
-  skills = [
-    { name: 'C#/.NET', level: 90 },
-    { name: 'Angular', level: 90 },
-    { name: 'HTML/CSS', level: 95 },
+  technologies = [
+    { name: 'C#', iconClass: 'fa-solid fa-code' },
+    { name: '.NET', iconClass: 'fa-solid fa-code' },
+    { name: 'Angular', iconClass: 'fa-brands fa-angular' },
+    { name: 'TypeScript', iconClass: 'fa-solid fa-code' },
+    { name: 'Node.js', iconClass: 'fa-brands fa-node-js' },
+    { name: 'SQL Server', iconClass: 'fa-solid fa-database' },
+    { name: 'Git', iconClass: 'fa-brands fa-git-alt' },
   ];
 }

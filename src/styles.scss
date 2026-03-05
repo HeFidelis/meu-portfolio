@@ -12,12 +12,18 @@
   --muted: #94a3b8;
 }
 
+.light {
+  --bg: #f8fafc;
+  --bg-light: #e2e8f0;
+  --primary: #0ea5e9;
+  --text: #0f172a;
+  --muted: #475569;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
-  scroll-behavior: smooth;
-  animation: fadeInPage 1s ease;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 @keyframes fadeInPage {
@@ -70,4 +76,9 @@ button::after {
 
 button:hover::after {
   opacity: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
 }
