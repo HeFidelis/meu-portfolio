@@ -8,5 +8,8 @@ import { RevealDirective } from "../../shared/reveal.directive";
   styleUrl: './about.scss',
 })
 export class About {
-
+  stats = [
+    { value: '10+', label: 'Projetos Concluídos' },
+    { value: '1+', label: 'Anos de Experiência' },
+  ];
 }

@@ -2,15 +2,65 @@
   <div class="contact-header">
     <h2>
       <span class="kicker">04.</span>
-      Contato
+      Entre em Contato
     </h2>
     <div class="header-line"></div>
   </div>
 
-  <form (submit)="sendEmail()">
-    <input type="text" placeholder="Seu nome" required />
-    <input type="email" placeholder="Seu email" required />
-    <textarea placeholder="Escreva uma mensagem" rows="6"></textarea>
-    <button type="submit">Enviar</button>
-  </form>
+  <div class="contact-container">
+    <div class="contact-info">
+      <h3>Vamos trabalhar juntos!</h3>
+      <p>
+        Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades para fazer
+        parte da sua visão.
+      </p>
+
+      <div class="info-cards">
+        @for (info of contactInfo; track info.label) {
+          <div class="info-card">
+            <div class="info-icon">
+              <i [class]="info.icon"></i>
+            </div>
+            <div class="info-content">
+              <div class="info-label">{{ info.label }}</div>
+              @if (info.link) {
+                <a [href]="info.link" class="info-value">{{ info.value }}</a>
+              } @else {
+                <div class="info-value">{{ info.value }}</div>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <form (submit)="sendEmail()">
+        <div class="form-group">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="Seu Nome" required />
+        </div>
+
+        <div class="form-group">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" placeholder="Seu Email" required />
+        </div>
+
+        <div class="form-group">
+          <i class="fa-solid fa-tag"></i>
+          <input type="text" placeholder="Assunto" required />
+        </div>
+
+        <div class="form-group">
+          <i class="fa-solid fa-message"></i>
+          <textarea placeholder="Sua Mensagem" rows="6" required></textarea>
+        </div>
+
+        <button type="submit">
+          <i class="fa-solid fa-paper-plane"></i>
+          Enviar Mensagem
+        </button>
+      </form>
+    </div>
+  </div>
 </section>

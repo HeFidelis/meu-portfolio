@@ -7,7 +7,35 @@
     <div class="header-line"></div>
   </div>
 
-  <div class="about-content">
-    <p>Animações, transições suaves e texto inteligente descrevendo você aqui.</p>
+  <div class="about-container">
+    <div class="about-content">
+      <p>Animações, transições suaves e texto inteligente descrevendo você aqui.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero iste dolorum enim ad ut ab
+        mollitia, accusamus facilis exercitationem corrupti architecto soluta rerum quasi velit
+        dolores accusantium debitis explicabo cum?
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa itaque maiores quam quae hic
+        deserunt placeat ullam beatae nam facilis tempora distinctio, ea nihil ex quod similique in
+        perferendis cum.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <div class="image-wrapper">
+        <img src="/Perfil_Linkedin.jpg" alt="Sobre Mim" class="profile-image" />
+        <div class="image-border"></div>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      @for (stat of stats; track stat.label) {
+        <div class="stat-card">
+          <div class="stat-value">{{ stat.value }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      }
+    </div>
   </div>
 </section>
