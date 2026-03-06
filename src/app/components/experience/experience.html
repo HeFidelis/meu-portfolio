@@ -1,0 +1,52 @@
+<section id="experience" class="experience-section" appReveal>
+  <div class="experience-header">
+    <h2>
+      <span class="kicker">02.</span>
+      Experiência Profissional
+    </h2>
+    <div class="header-line"></div>
+  </div>
+
+  <div class="timeline">
+    @for (exp of experiences; track exp.position; let i = $index) {
+      <div class="timeline-item" [class.left]="i % 2 === 0" [class.right]="i % 2 === 1">
+        <div class="timeline-content">
+          <div class="experience-card">
+            <div class="card-header">
+              <div class="period">
+                <i class="fa-solid fa-calendar"></i>
+                {{ exp.period }}
+              </div>
+              <span class="status" [class.current]="exp.status === 'Atual'">{{ exp.status }}</span>
+            </div>
+
+            <h3>{{ exp.position }}</h3>
+
+            <div class="company-info">
+              <div>
+                <i class="fa-solid fa-briefcase"></i>
+                {{ exp.company }}
+              </div>
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+                {{ exp.location }}
+              </div>
+            </div>
+
+            <p class="description">{{ exp.description }}</p>
+
+            <div class="technologies">
+              @for (tech of exp.technologies; track tech) {
+                <span class="tech-badge">{{ tech }}</span>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-marker">
+          <div class="marker-circle" [class.active]="exp.status === 'Atual'"></div>
+        </div>
+      </div>
+    }
+  </div>
+</section>
