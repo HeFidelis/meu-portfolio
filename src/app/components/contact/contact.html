@@ -35,31 +35,43 @@
     </div>
 
     <div class="contact-form">
-      <form (submit)="sendEmail()">
+      <form (submit)="sendEmail($event)">
         <div class="form-group">
           <i class="fa-solid fa-user"></i>
-          <input type="text" placeholder="Seu Nome" required />
+          <input type="text" name="name" placeholder="Seu Nome" required />
         </div>
 
         <div class="form-group">
           <i class="fa-solid fa-envelope"></i>
-          <input type="email" placeholder="Seu Email" required />
+          <input type="email" name="email" placeholder="Seu Email" required />
         </div>
 
         <div class="form-group">
           <i class="fa-solid fa-tag"></i>
-          <input type="text" placeholder="Assunto" required />
+          <input type="text" name="subject" placeholder="Assunto" required />
         </div>
 
         <div class="form-group">
           <i class="fa-solid fa-message"></i>
-          <textarea placeholder="Sua Mensagem" rows="6" required></textarea>
+          <textarea name="message" placeholder="Sua Mensagem" rows="6" required></textarea>
         </div>
 
-        <button type="submit">
+        <input type="hidden" name="_subject" value="Novo contato do portfolio" />
+
+        <button type="submit" [disabled]="isSubmitting">
           <i class="fa-solid fa-paper-plane"></i>
-          Enviar Mensagem
+          {{ isSubmitting ? 'Enviando...' : 'Enviar Mensagem' }}
         </button>
+
+        @if (submitStatus !== 'idle') {
+          <p
+            class="submit-feedback"
+            [class.success]="submitStatus === 'success'"
+            [class.error]="submitStatus === 'error'"
+          >
+            {{ submitMessage }}
+          </p>
+        }
       </form>
     </div>
   </div>

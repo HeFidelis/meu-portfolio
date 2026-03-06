@@ -8,6 +8,12 @@ import { RevealDirective } from "../../shared/reveal.directive";
   styleUrl: './contact.scss',
 })
 export class Contact {
+  private readonly formspreeEndpoint = 'https://formspree.io/f/mojngewn';
+
+  isSubmitting = false;
+  submitStatus: 'idle' | 'success' | 'error' = 'idle';
+  submitMessage = '';
+
   contactInfo = [
     {
       icon: 'fa-solid fa-envelope',
@@ -29,7 +35,41 @@ export class Contact {
     }
   ];
 
-  sendEmail() {
-    alert('Mensagem enviada com sucesso!');
+  async sendEmail(event: Event) {
+    event.preventDefault();
+
+    const form = event.target as HTMLFormElement | null;
+    if (!form || this.isSubmitting) {
+      return;
+    }
+
+    this.isSubmitting = true;
+    this.submitStatus = 'idle';
+    this.submitMessage = '';
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(this.formspreeEndpoint, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error('Falha ao enviar mensagem');
+      }
+
+      this.submitStatus = 'success';
+      this.submitMessage = 'Mensagem enviada com sucesso! Retornarei em breve.';
+      form.reset();
+    } catch {
+      this.submitStatus = 'error';
+      this.submitMessage = 'Nao foi possivel enviar agora. Tente novamente em instantes.';
+    } finally {
+      this.isSubmitting = false;
+    }
   }
 }
