@@ -8,6 +8,7 @@ import { Projects } from './components/projects/projects';
 import { Skills } from './components/skills/skills';
 import { Footer } from './components/footer/footer';
 import { Experience } from './components/experience/experience';
+import { ScrollTop } from './components/scroll-top/scroll-top';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,8 @@ import { Experience } from './components/experience/experience';
     Projects,
     Skills,
     Footer,
-    Experience
+    Experience,
+    ScrollTop
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
