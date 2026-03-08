@@ -27,6 +27,6 @@ export class Banner {
 
     socialLinks = [
     { iconClass: 'fa-brands fa-github', url: 'https://github.com/HeFidelis', label: 'GitHub' },
-    { iconClass: 'fa-brands fa-linkedin-in', url: 'https://www.linkedin.com/feed/', label: 'LinkedIn' }
+    { iconClass: 'fa-brands fa-linkedin-in', url: 'https://www.linkedin.com/in/heitorfidelis/', label: 'LinkedIn' }
   ];
 }
