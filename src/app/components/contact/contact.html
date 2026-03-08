@@ -36,24 +36,84 @@
 
     <div class="contact-form">
       <form (submit)="sendEmail($event)">
-        <div class="form-group">
-          <i class="fa-solid fa-user"></i>
-          <input type="text" name="name" placeholder="Seu Nome" required />
+        <div
+          class="form-group"
+          [class.valid]="fieldStatus.name.valid && fieldStatus.name.touched"
+          [class.invalid]="!fieldStatus.name.valid && fieldStatus.name.touched"
+        >
+          <i class="fa-solid fa-user field-icon"></i>
+          <input
+            type="text"
+            name="name"
+            placeholder="Seu Nome"
+            (input)="validateName($event)"
+            (blur)="validateName($event)"
+            required
+          />
+          @if (!fieldStatus.name.valid && fieldStatus.name.touched && fieldStatus.name.error) {
+            <span class="error-message">{{ fieldStatus.name.error }}</span>
+          }
         </div>
 
-        <div class="form-group">
-          <i class="fa-solid fa-envelope"></i>
-          <input type="email" name="email" placeholder="Seu Email" required />
+        <div
+          class="form-group"
+          [class.valid]="fieldStatus.email.valid && fieldStatus.email.touched"
+          [class.invalid]="!fieldStatus.email.valid && fieldStatus.email.touched"
+        >
+          <i class="fa-solid fa-envelope field-icon"></i>
+          <input
+            type="email"
+            name="email"
+            placeholder="Seu Email"
+            (input)="validateEmail($event)"
+            (blur)="validateEmail($event)"
+            required
+          />
+          @if (!fieldStatus.email.valid && fieldStatus.email.touched && fieldStatus.email.error) {
+            <span class="error-message">{{ fieldStatus.email.error }}</span>
+          }
         </div>
 
-        <div class="form-group">
-          <i class="fa-solid fa-tag"></i>
-          <input type="text" name="subject" placeholder="Assunto" required />
+        <div
+          class="form-group"
+          [class.valid]="fieldStatus.subject.valid && fieldStatus.subject.touched"
+          [class.invalid]="!fieldStatus.subject.valid && fieldStatus.subject.touched"
+        >
+          <i class="fa-solid fa-tag field-icon"></i>
+          <input
+            type="text"
+            name="subject"
+            placeholder="Assunto"
+            (input)="validateSubject($event)"
+            (blur)="validateSubject($event)"
+            required
+          />
+          @if (
+            !fieldStatus.subject.valid && fieldStatus.subject.touched && fieldStatus.subject.error
+          ) {
+            <span class="error-message">{{ fieldStatus.subject.error }}</span>
+          }
         </div>
 
-        <div class="form-group">
-          <i class="fa-solid fa-message"></i>
-          <textarea name="message" placeholder="Sua Mensagem" rows="6" required></textarea>
+        <div
+          class="form-group"
+          [class.valid]="fieldStatus.message.valid && fieldStatus.message.touched"
+          [class.invalid]="!fieldStatus.message.valid && fieldStatus.message.touched"
+        >
+          <i class="fa-solid fa-message field-icon"></i>
+          <textarea
+            name="message"
+            placeholder="Sua Mensagem"
+            rows="6"
+            (input)="validateMessage($event)"
+            (blur)="validateMessage($event)"
+            required
+          ></textarea>
+          @if (
+            !fieldStatus.message.valid && fieldStatus.message.touched && fieldStatus.message.error
+          ) {
+            <span class="error-message">{{ fieldStatus.message.error }}</span>
+          }
         </div>
 
         <input type="hidden" name="_subject" value="Novo contato do portfolio" />
