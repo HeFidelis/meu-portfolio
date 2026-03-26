@@ -10,31 +10,22 @@ import { RevealDirective } from '../../shared/reveal.directive';
 export class Experience {
   experiences = [
     {
-      period: 'Fevereiro 2026 - Atual',
+      period: 'Fevereiro 2026 - Até o momento',
       status: 'Atual',
-      position: 'Desenvolvedor Full Stack',
+      position: 'Desenvolvedor FullStack Jr.',
       company: 'Buildbox IT Solutions',
       location: 'Remoto',
       description: 'Responsável por atualizar e implementar aplicativos mobile e aplicações backend (microsserviços)',
-      technologies: ['React Native', 'Expo', 'Tamagui', 'Zustand', 'Node.js', 'NestJS', 'Firebase', 'Azure']
+      technologies: ['C#', 'ASP.NET', 'SQL Server', 'Azure', 'TypeScript', 'Angular']
     },
     {
-      period: 'Abril 2022 - Janeiro 2026',
-      status: 'Recente',
-      position: 'Autônomo',
-      company: 'Projetos Freelance',
-      location: 'Remoto',
-      description: 'Desenvolvimento de aplicações web e mobile. Consultoria em arquitetura de sistemas e otimização de performance.',
-      technologies: ['Angular', 'React', 'TypeScript', 'Node.js', 'PostgreSQL', 'MongoDB']
-    },
-    {
-      period: 'Junho 2021 - Março 2022',
+      period: 'Outubro 2025 - Março 2026',
       status: 'Anterior',
-      position: 'Desenvolvedor Junior',
-      company: 'Tech Solutions',
+      position: 'Estagiário',
+      company: 'Nelson Wilians Advogados',
       location: 'Campo Grande - MS',
-      description: 'Desenvolvimento frontend com foco em componentes reutilizáveis e boas práticas de código limpo.',
-      technologies: ['Angular', 'HTML/CSS', 'TypeScript', 'REST API']
+      description: 'Estagiário no setor de automação da empresa, responsável por auxiliar no monitoramento de robôs para automatizar processos jurídicos',
+      technologies: ['Pacote Office', 'Python']
     }
   ];
 }
