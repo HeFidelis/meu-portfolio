@@ -9,4 +9,14 @@
     <li><a href="#skills" (click)="scrollToSection($event, 'skills')">Habilidades</a></li>
     <li><a href="#contact" (click)="scrollToSection($event, 'contact')">Contato</a></li>
   </ul>
+
+  <button
+    class="menu-icon"
+    (click)="toggleMenu()"
+    [attr.aria-label]="menuOpen ? 'Fechar menu' : 'Abrir menu'"
+  >
+    <span [class.open]="menuOpen"></span>
+    <span [class.open]="menuOpen"></span>
+    <span [class.open]="menuOpen"></span>
+  </button>
 </nav>

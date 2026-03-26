@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RevealDirective } from "../../shared/reveal.directive";
 
 @Component({
@@ -34,5 +34,10 @@ export class Projects {
 
   close() {
     this.selectedProject = null;
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscKey() {
+    this.close();
   }
 }

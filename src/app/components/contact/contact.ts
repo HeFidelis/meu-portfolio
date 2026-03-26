@@ -27,7 +27,7 @@ export class Contact {
       icon: 'fa-solid fa-envelope',
       label: 'Email',
       value: 'heitorfidelis81@gmail.com',
-      link: 'mailto:seuemail@gmail.com'
+      link: 'mailto:heitorfidelis81@gmail.com'
     },
     {
       icon: 'fa-solid fa-phone',
